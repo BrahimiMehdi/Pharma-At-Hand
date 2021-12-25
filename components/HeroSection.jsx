@@ -3,7 +3,7 @@ import Link from "next/link"
 import {Link as LinkS} from "react-scroll"
 const HeroSection = () => {
     return (
-        <div name="/" className='grid place-items-center w-full min-h-screen'>
+        <div name="/" className='grid place-items-center w-full min-h-screen pt-14 sm:pt-0'>
             <div className="grid grid-cols-1 gap-[10px] md:gap-[20%] grid-rows-2 mt-14 md:mt-4 md:grid-cols-2 md:grid-rows-1 pt-14  w-[80%] min-h-[80%]">
                 <div className='h-[70%] w-full flex flex-col justify-evenly'>
                     <h1 className="text-4xl font-semibold text-left text-dark-200">Find All The resources you need</h1>

@@ -1,18 +1,41 @@
-import React from "react";
-
+import React,{useEffect,useRef} from "react";
+import { gsap,Power3 } from "gsap";
+import {ScrollTrigger} from 'gsap/dist/ScrollTrigger'
 const AboutSection = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const aboutImage = useRef()
+  const mainTitle = useRef()
+  const subtitle = useRef()
+  useEffect(() => {
+    gsap.from(mainTitle.current,{y:"-100%",opacity:0,duration:2,ease:Power3.easeInOut,scrollTrigger:{
+      trigger:"#aboutSection",
+      start:"top bottom",
+      scrub:1,
+    },})
+    gsap.from(aboutImage.current,{x:"-100%",opacity:0,duration:2,ease:Power3.easeInOut,scrollTrigger:{
+      trigger:mainTitle.current,
+      start:"top center",
+      scrub:1,
+    },})
+    gsap.from(subtitle.current,{x:"100%",opacity:0,duration:2,ease:Power3.easeInOut,scrollTrigger:{
+      trigger:mainTitle.current,
+      start:"top center",
+      scrub:1,
+    },})
+  }, [])
   return (
     <div
       id="aboutSection"
       name="/about"
-      className="w-full min-h-screen flex flex-col items-center justify-evenly py-8 sm:py-0 bg-light"
+      className="w-full min-h-screen flex flex-col items-center justify-evenly py-8 sm:py-0 bg-light overflow-x-hidden"
     >
       <div className="w-[80%] min-h-[100px] grid place-items-center">
-        <h1 className="text-5xl text-dark-100">What is Pharma At Hand ?</h1>
+        <h1 ref={mainTitle} className="text-5xl text-dark-100">What is Pharma At Hand ?</h1>
       </div>
       <div className="w-[80%] min-h-[60%] grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 place-items-center">
-        <img src="/Pharma.svg" alt="" />
-        <div className="flex flex-col items-center justify-evenly h-full text-dark-200">
+        <img ref={aboutImage} src="/Pharma.svg" alt="" />
+        <div ref={subtitle} className="flex flex-col items-center justify-evenly h-full text-dark-200">
           <h1 className="text-2xl">A platform made by pharmacy students for pharmacy students</h1>
           <p className="mt-4 sm:mt-0">
             Efficiently network scalable ROI vis-a-vis pandemic technology.
