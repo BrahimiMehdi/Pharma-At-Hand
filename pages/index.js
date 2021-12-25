@@ -6,7 +6,7 @@ import { DrivesSection } from '../components'
 import {WelcomeAnimation} from '../components'
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-light-100">
+    <main className="w-full min-h-screen snap-y snap-proximity bg-light-100">
       <Head>
         <title>Pharma At Hand</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,6 +16,6 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <DrivesSection />
-    </div>
+    </main>
   )
 }

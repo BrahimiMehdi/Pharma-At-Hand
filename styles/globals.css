@@ -7,4 +7,8 @@
     box-sizing: border-box;
     font-family: 'Montserrat Alternates', sans-serif;
     scroll-behavior: smooth;
+    
+}
+html{
+    scroll-snap-type:y proximity;  
 }

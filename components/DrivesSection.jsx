@@ -2,7 +2,7 @@ import React from "react";
 
 const DrivesSection = () => {
   return (
-    <div name="/drives" className="min-h-screen w-full bg-dark-100">
+    <div name="/drives" className="min-h-screen snap-center w-full bg-dark-100">
       
     </div>
   );

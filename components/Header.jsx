@@ -8,7 +8,7 @@ const Header = () => {
     const headerBg= useRef()
     const bigHeaderBg= useRef()
     useEffect(() => {
-        gsap.to(headerBg.current,{backgroundColor:"transparent",ease:Power3.easeInOut, scrollTrigger:{
+        gsap.to(headerBg.current,{backgroundColor:"transparent",ease:Power3.easeInOut,duration:0.3, scrollTrigger:{
             trigger:"#heroButtons",
             start:"top top",
             scrub:1,
@@ -17,10 +17,10 @@ const Header = () => {
             trigger:"#heroButtons",
             start:"top top",
             scrub:1,
-        }},0.3)
+        },duration:0.3},0.3)
     }, [])
   return (
-    <div ref={bigHeaderBg}  className="flex  z-20 justify-between w-screen px-6 h-[80px] items-center fixed">
+    <header ref={bigHeaderBg}  className="flex z-20 justify-between w-screen px-6 h-[80px] items-center fixed">
         <div>
             <LinkS className="text-light-200 text-3xl font-bold cursor-pointer" to="/">Pharma At Hand</LinkS>
         </div>
@@ -35,7 +35,7 @@ const Header = () => {
                 <LinkS to="/videos">Videos</LinkS>
             </span>
         </div>
-    </div>
+    </header>
   );
 };
 

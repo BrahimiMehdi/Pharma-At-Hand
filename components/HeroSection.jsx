@@ -7,17 +7,28 @@ const HeroSection = () => {
   const heroInfo = useRef();
   const t1 = gsap.timeline();
   useEffect(() => {
-      t1.from(heroImage.current,{opacity:0,x:"-100%",ease:Power3.easeInOut,duration:1},2.5)
-        .from(heroInfo.current,{opacity:0,x:"100%",ease:Power3.easeInOut,duration:1})
-  }, [])
+    t1.from(
+      heroImage.current,
+      { opacity: 0, x: "-100%", ease: Power3.easeInOut, duration: 1 },
+      2.5
+    ).from(heroInfo.current, {
+      opacity: 0,
+      x: "100%",
+      ease: Power3.easeInOut,
+      duration: 1,
+    });
+  }, []);
   return (
-    <div
+    <section
       name="/"
-      className="grid place-items-center w-full min-h-screen pt-14 sm:pt-0"
+      className="grid snap-center place-items-center w-full min-h-screen pt-14 sm:pt-0"
     >
-      <div className="grid grid-cols-1 gap-[10px] md:gap-[20%] grid-rows-2 mt-14 md:mt-4 md:grid-cols-2 md:grid-rows-1 pt-14  w-[80%] min-h-[80%]">
-        <div ref={heroInfo} className="h-[70%] w-full flex flex-col justify-evenly">
-          <h1  className="text-4xl font-semibold text-left text-dark-200">
+      <div className="grid  grid-cols-1 gap-[10px] md:gap-[20%] grid-rows-2 mt-14 md:mt-4 md:grid-cols-2 md:grid-rows-1 pt-14  w-[80%] min-h-[80%]">
+        <div
+          ref={heroInfo}
+          className="h-[70%] w-full flex flex-col justify-evenly"
+        >
+          <h1 className="text-4xl font-semibold text-left text-dark-200">
             Find All The resources you need
           </h1>
           <p className="text-light-200 text-left">
@@ -39,11 +50,14 @@ const HeroSection = () => {
             </span>
           </div>
         </div>
-        <div ref={heroImage} className="h-[60%] hidden sm:block w-[60%] md:h-full md:w-full">
+        <div
+          ref={heroImage}
+          className="h-[60%] hidden sm:block w-[60%] md:h-full md:w-full"
+        >
           <img src="/Hero.svg" alt="" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
