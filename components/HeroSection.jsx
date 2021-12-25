@@ -20,7 +20,7 @@ const HeroSection = () => {
       ease: Power3.easeInOut,
       duration: 1,
     });
-    gsap.to(outerDiv.current,{opacity:0,scrollTrigger:{trigger:"#aboutSection",start:"top center"}})
+    gsap.to(outerDiv.current,{opacity:0,scrollTrigger:{trigger:"#aboutSection",start:"top bottom",toggleActions: "restart pause resume none",scrub:1}})
   }, []);
   return (
     <section
