@@ -8,18 +8,21 @@ const AboutSection = () => {
   const mainTitle = useRef()
   const subtitle = useRef()
   useEffect(() => {
-    gsap.from(mainTitle.current,{y:"-100%",opacity:0,duration:2,ease:Power3.easeInOut,scrollTrigger:{
+    gsap.from(mainTitle.current,{y:"-100%",scale:0.7,opacity:0,duration:2,ease:Power3.easeInOut,scrollTrigger:{
       trigger:"#aboutSection",
+      toggleActions: "restart pause resume none",
       start:"top bottom",
       scrub:1,
     },})
-    gsap.from(aboutImage.current,{x:"-100%",opacity:0,duration:2,ease:Power3.easeInOut,scrollTrigger:{
+    gsap.from(aboutImage.current,{x:"-100%",opacity:0,duration:2,scale:0.8,ease:Power3.easeInOut,scrollTrigger:{
       trigger:mainTitle.current,
+      toggleActions: "restart pause resume none",
       start:"top center",
       scrub:1,
     },})
-    gsap.from(subtitle.current,{x:"100%",opacity:0,duration:2,ease:Power3.easeInOut,scrollTrigger:{
+    gsap.from(subtitle.current,{x:"100%",scale:0.8,opacity:0,duration:2,ease:Power3.easeInOut,scrollTrigger:{
       trigger:mainTitle.current,
+      toggleActions: "restart pause resume none",
       start:"top center",
       scrub:1,
     },})
@@ -30,7 +33,7 @@ const AboutSection = () => {
       name="/about"
       className="w-full min-h-screen flex flex-col items-center justify-evenly py-8 sm:py-0 bg-light overflow-x-hidden"
     >
-      <div className="w-[80%] min-h-[100px] grid place-items-center">
+      <div className="w-[80%] mt-8 min-h-[100px] grid place-items-center">
         <h1 ref={mainTitle} className="text-5xl text-dark-100">What is Pharma At Hand ?</h1>
       </div>
       <div className="w-[80%] min-h-[60%] grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 place-items-center">
