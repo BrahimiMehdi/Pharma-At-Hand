@@ -31,9 +31,9 @@ const AboutSection = () => {
     <section
       id="aboutSection"
       name="/about"
-      className="w-full snap-center min-h-screen flex flex-col items-center justify-evenly py-8 sm:py-0 bg-light overflow-x-hidden"
+      className="w-full md:snap-center min-h-screen flex flex-col items-center justify-evenly py-8 sm:py-0 bg-light overflow-x-hidden"
     >
-      <div className="w-[80%] mt-8 min-h-[100px] grid place-items-center">
+      <div className="w-[80%] mt-8 min-h-[50px] hidden sm:gird sm:place-items-center">
         <h1 ref={mainTitle} className="text-5xl text-dark-100">What is Pharma At Hand ?</h1>
       </div>
       <div className="w-[80%] min-h-[60%] grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 place-items-center">

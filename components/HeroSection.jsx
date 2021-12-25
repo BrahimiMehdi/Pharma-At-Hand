@@ -26,28 +26,28 @@ const HeroSection = () => {
     <section
         ref={outerDiv}
       name="/"
-      className="grid  overflow-x-hidden snap-center place-items-center w-full min-h-screen pt-14 sm:pt-0"
+      className="grid  overflow-x-hidden md:snap-center place-items-center w-full min-h-screen pt-14 sm:pt-0"
     >
       <div className="grid  grid-cols-1 gap-[10px] md:gap-[20%] grid-rows-2 mt-14 md:mt-4 md:grid-cols-2 md:grid-rows-1 pt-14  w-[80%] min-h-[80%]">
         <div
           ref={heroInfo}
-          className="h-[70%] w-full flex flex-col justify-evenly"
+          className="h-[70%] w-full flex flex-col row-span-2 sm:row-span-1 justify-evenly"
         >
           <h1 className="text-4xl font-semibold text-left text-dark-200">
             Find All The resources you need
           </h1>
-          <p className="text-light-200 text-left">
+          <p className="text-light-200 mt-2 text-left">
             Phosfluorescently morph economically sound metrics without vertical
             materials. Holisticly leverage existing business niches whereas
             installed.
           </p>
-          <div id="heroButtons" className="w-full flex items-center ">
-            <span className="bg-white px-4 border-[1px] transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-light-100 mr-4 border-dark-200 py-2 text-center text-dark-100 w-[150px]">
-              <Link href="/study-year">GET STARTED</Link>
+          <div id="heroButtons" className="w-full flex mt-4 items-center ">
+            <span className="bg-white  border-[1px] transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-light-100 mr-4 border-dark-200 py-2 text-center text-dark-100 w-[150px]">
+              <Link className="w-full mx-4 h-full" href="/study-year">GET STARTED</Link>
             </span>
-            <span>
+            <span className="text-white  border-[1px] ml-4 transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-dark-200 border-dark-200 py-2 text-center bg-dark-100 w-[150px] cursor-pointer">
               <LinkS
-                className="text-white px-4 border-[1px] ml-4 transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-dark-200 border-dark-200 py-2 text-center bg-dark-100 w-[150px] cursor-pointer"
+                className="w-full mx-4 h-full"
                 to="/about"
               >
                 SEE MORE
