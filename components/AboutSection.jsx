@@ -8,19 +8,19 @@ const AboutSection = () => {
   const mainTitle = useRef()
   const subtitle = useRef()
   useEffect(() => {
-    gsap.from(mainTitle.current,{y:"-100%",scale:0.7,opacity:0,duration:1.6,ease:Power3.easeInOut,scrollTrigger:{
+    gsap.from(mainTitle.current,{y:"-90%",scale:0.7,opacity:0.1,duration:1.6,ease:Power3.easeInOut,scrollTrigger:{
       trigger:"#aboutSection",
       toggleActions: "restart pause resume none",
       start:"top bottom",
       scrub:1,
     },})
-    gsap.from(aboutImage.current,{x:"-100%",opacity:0,duration:1.6,scale:0.8,ease:Power3.easeInOut,scrollTrigger:{
+    gsap.from(aboutImage.current,{x:"-90%",opacity:0,duration:1.6,scale:0.8,ease:Power3.easeInOut,scrollTrigger:{
       trigger:mainTitle.current,
       toggleActions: "restart pause resume none",
       start:"top center",
       scrub:1,
     },})
-    gsap.from(subtitle.current,{x:"100%",scale:0.8,opacity:0,duration:1.6,ease:Power3.easeInOut,scrollTrigger:{
+    gsap.from(subtitle.current,{x:"90%",scale:0.8,opacity:0,duration:1.6,ease:Power3.easeInOut,scrollTrigger:{
       trigger:mainTitle.current,
       toggleActions: "restart pause resume none",
       start:"top center",

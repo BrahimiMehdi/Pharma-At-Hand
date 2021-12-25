@@ -2,9 +2,12 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Link as LinkS } from "react-scroll";
 import { gsap, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const HeroSection = () => {
+    gsap.registerPlugin(ScrollTrigger)
   const heroImage = useRef();
   const heroInfo = useRef();
+  const outerDiv = useRef();
   const t1 = gsap.timeline();
   useEffect(() => {
     t1.from(
@@ -17,11 +20,13 @@ const HeroSection = () => {
       ease: Power3.easeInOut,
       duration: 1,
     });
+    gsap.to(outerDiv.current,{opacity:0,scrollTrigger:{trigger:"#aboutSection",start:"top center"}})
   }, []);
   return (
     <section
+        ref={outerDiv}
       name="/"
-      className="grid snap-center place-items-center w-full min-h-screen pt-14 sm:pt-0"
+      className="grid  overflow-x-hidden snap-center place-items-center w-full min-h-screen pt-14 sm:pt-0"
     >
       <div className="grid  grid-cols-1 gap-[10px] md:gap-[20%] grid-rows-2 mt-14 md:mt-4 md:grid-cols-2 md:grid-rows-1 pt-14  w-[80%] min-h-[80%]">
         <div
