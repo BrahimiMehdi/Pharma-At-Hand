@@ -45,9 +45,9 @@ const HeroSection = () => {
             <span className="bg-white  border-[1px] transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-light-100 mr-4 border-dark-200 py-2 text-center text-dark-100 w-[150px]">
               <Link className="w-full mx-4 h-full" href="/study-year">GET STARTED</Link>
             </span>
-            <span className="text-white  border-[1px] ml-4 transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-dark-200 border-dark-200 py-2 text-center bg-dark-100 w-[150px] cursor-pointer">
+            <span className="text-white  border-[1px] ml-4 transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-dark-200 border-dark-200 py-2 text-center bg-dark-100 w-[150px] ">
               <LinkS
-                className="w-full mx-4 h-full"
+                className="w-full cursor-pointer mx-4 h-full"
                 to="/about"
               >
                 SEE MORE
