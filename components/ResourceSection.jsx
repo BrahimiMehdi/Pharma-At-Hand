@@ -27,18 +27,20 @@ const ResourceSection = () => {
       className="bg-light overflow-x-hidden w-full min-h-screen md:snap-center grid place-items-center"
     >
         <div ref={trigger}></div>
-      <div ref={subtitle} className="w-[80%] min-h-[80%] grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1">
-        <div className="flex flex-col text-left text-dark-200 justify-evenly min-h-full">
+      <div ref={subtitle} className="w-[80%] place-items-center min-h-[80%] grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1">
+        <div className="flex row-span-2 sm:row-span-1 flex-col text-left text-dark-200 justify-evenly min-h-full">
           <h1 className="text-4xl mb-2">And Manny Other Usefull Resources</h1>
           <p className="text-dark-100 mb-4">
             we provied a collection of books , videos and usefull tutorials made
             by pharmacy students and professors
+            <br /> and you can also find web development courses, design
+            and manny other intresting topics here.
           </p>
           <span className="bg-dark-200 w-[150px] h-[50px] text-light text-center grid place-items-center transition-all duration-300 active:bg-light-200 active:scale-95 hover:bg-dark-100 hover:scale-105">
             <Link href="/year">GET STARTED</Link>
           </span>
         </div>
-        <div ref={rsrcImage} className="w-full h-full grid place-items-center">
+        <div ref={rsrcImage} className="w-full hidden h-full sm:grid sm:place-items-center">
           <img src="/resources.svg" alt="" />
         </div>
       </div>
