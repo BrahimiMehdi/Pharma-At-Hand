@@ -30,7 +30,7 @@ const DrivesSection = () => {
       }
     })
   }, [])
-  //changes
+
   return (
     <section id="driveSection" name="/drives" className="w-full pt-14 overflow-hidden md:snap-center grid place-items-center min-h-screen bg-light-100 overflow-x-hidden">
         <div className="w-4/5 min-h-[80%] flex flex-col justify-between items-center mt-12">
