@@ -1,9 +1,9 @@
 import React from "react";
-import { getDepartments } from "../../Services";
+
 import { ChooseDepartment } from "../../components";
 import Head from "next/head";
 
-const year = ({ yearData }) => {
+const year = () => {
  
   return (
     <main className="w-full grid place-items-center min-h-screen snap-none  md:snap-y md:snap-proximity  bg-light-100">
@@ -20,9 +20,3 @@ const year = ({ yearData }) => {
 
 export default year;
 
-export async function getStaticProps() {
-  const yearData = (await getDepartments()) || [];
-  return {
-    props: { yearData },
-  };
-}
