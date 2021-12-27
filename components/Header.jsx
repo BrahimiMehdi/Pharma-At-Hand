@@ -32,7 +32,7 @@ const Header = () => {
                 <LinkS to="/drives">Drives</LinkS>
             </span>
             <span className="cursor-pointer text-white transition-all duration-300 hover:text-cyan-200 hover:text-xl">
-                <LinkS to="/videos">Videos</LinkS>
+                <LinkS to="/resources">resources</LinkS>
             </span>
         </div>
     </header>
