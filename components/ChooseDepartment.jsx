@@ -1,14 +1,12 @@
 
-import React from "react";
+import React,{useEffect} from "react";
 
 const ChooseDepartment = ({ department,currentYear }) => {
     
-    //{yearData.map((studyYear)=>{return(studyYear.node.departements.map((dep,index)=>{return(<ChooseDepartment key={index} currentYear={studyYear.node.currentYear} department={dep} />)}))})}
+    
   return (
     <div className="w-full min-h-full flex flex-col items-center justify-evenly">
-        <div>
-
-        </div>
+        
       <div className="grid place-items-center">
         <h1 className="text-4xl text-dark-200">{department.name}</h1>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { getDepartments } from "../../Services";
+import { getYears } from "../../Services";
 import { ChooseDepartment } from "../../components";
 import Head from "next/head";
 import Link from "next/link";
@@ -28,7 +28,7 @@ const year = ({ yearData }) => {
 export default year;
 
 export async function getStaticProps() {
-  const yearData = (await getDepartments()) || [];
+  const yearData = (await getYears()) || [];
   return {
     props: { yearData },
   };
