@@ -26,6 +26,10 @@ const years = ({ yearData }) => {
 };
 
 export default years;
+export async function getInitialProps ({ req }) {
+  const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+  const response = await fetch(baseUrl + '/posts');
+}
 
 export async function getStaticProps({ params }) {
   const yearData = (await getDepartments(params.slug)) || [];
