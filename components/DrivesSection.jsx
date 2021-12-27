@@ -14,8 +14,8 @@ const DrivesSection = () => {
       scale:0.8,
       opacity:0,
       scrollTrigger:{
-        trigger:"driveSection",
-        start:"top top",
+        trigger:mainTitle.current,
+        start:"top bottom",
         scrub:1,
       }
     })
@@ -24,8 +24,8 @@ const DrivesSection = () => {
       scale:0.8,
       opacity:0,
       scrollTrigger:{
-        trigger:"driveSection",
-        start:"top center",
+        trigger:mainTitle.current,
+        start:"top bottom",
         scrub:1,
       }
     })
