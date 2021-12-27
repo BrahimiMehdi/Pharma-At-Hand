@@ -11,10 +11,10 @@ const year = ({ yearData }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full gap-8 py-4 px-6  min-h-screen grid grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2  place-items-center">
-        {yearData.map((studyYear) => {
+        {yearData.map((studyYear,index) => {
           return (
-            <div className="grid h-full bg-gradient-to-r from-light-200 to-orange-300 text-4xl text-light transition-all duration-300 hover:scale-105  w-full place-items-center">
-              <Link href={`/year/${studyYear.node.currentYear}`} className="text-4xl text-light">
+            <div key={index} className="grid h-full bg-gradient-to-r from-light-200 to-orange-300 text-4xl text-light transition-all duration-300 hover:scale-105  w-full place-items-center">
+              <Link key={studyYear.node.currentYear} href={`/year/${studyYear.node.currentYear}`} className="text-4xl text-light">
                 {studyYear.node.currentYear}
               </Link>
             </div>
