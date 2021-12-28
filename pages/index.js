@@ -5,7 +5,8 @@ import { AboutSection } from '../components'
 import { DrivesSection } from '../components'
 import {WelcomeAnimation} from '../components'
 import { ResourceSection } from '../components'
-export default function Home() {
+import { getYears } from '../Services'
+export default function Home({yearData}) {
   return (
     <main className="w-full  min-h-screen snap-none  md:snap-y md:snap-proximity  bg-light-100">
       <Head>
@@ -16,8 +17,14 @@ export default function Home() {
       <WelcomeAnimation />
       <HeroSection />
       <AboutSection />
-      <DrivesSection />
+      <DrivesSection year={yearData} />
       <ResourceSection />
     </main>
   )
+}
+export async function getStaticProps() {
+  const yearData = (await getYears()) || [];
+  return {
+    props: { yearData },
+  };
 }
