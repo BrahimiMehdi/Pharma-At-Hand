@@ -28,7 +28,7 @@ export const getDepartments = async (slug) => {
         title
         driveLink
       }
-      slug
+    
     }
     slug
     videos {

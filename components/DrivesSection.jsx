@@ -47,7 +47,7 @@ const DrivesSection = ({ year }) => {
         >
           {year.map((StudyYear, index) => {
             return (
-              <div className="w-[200px] shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-green-200 to-light-100">
+              <div key={index} className="w-[200px] shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-light hover:text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-green-400 to-dark-100">
                 <Link key={StudyYear.node.slug} href={`/year/${StudyYear.node.slug}`}>
                   {StudyYear.node.currentYear}
                 </Link>

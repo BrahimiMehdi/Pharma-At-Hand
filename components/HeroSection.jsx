@@ -50,8 +50,8 @@ const HeroSection = () => {
             installed.
           </p>
           <div id="heroButtons" className="w-full sm:w-[50%] flex mt-4 items-center text-sm ">
-            <Link className="grid h-full place-items-center text-center" href={`/year`}>
-              <span className="bg-white cursor-pointer border-[1px] transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-light-100 mr-4 border-dark-200 py-2 text-center text-dark-100 w-[100%]">
+            <Link replace className="grid h-full place-items-center text-center" href={`/year`}>
+              <span className="bg-white  cursor-pointer border-[1px] transition-all duration-300 active:scale-95 hover:scale-105 active:bg-light-200 hover:bg-light-100 mr-4 border-dark-200 py-2 text-center text-dark-100 w-[100%]">
                 GET STARTED
               </span>
             </Link>

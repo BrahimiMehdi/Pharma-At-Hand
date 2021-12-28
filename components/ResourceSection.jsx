@@ -53,7 +53,7 @@ const ResourceSection = () => {
             <br /> and you can also find web development courses, design and
             manny other intresting topics here.
           </p>
-          <Link href={`/year`}>
+          <Link replace href={`/year`}>
             <span className="bg-dark-200 cursor-pointer w-[150px] h-[50px] text-light text-center grid place-items-center transition-all duration-300 active:bg-light-200 active:scale-95 hover:bg-dark-100 hover:scale-105">
               GET STARTED
             </span>
