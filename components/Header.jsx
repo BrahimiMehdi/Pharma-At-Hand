@@ -63,10 +63,10 @@ const Header = () =>  {
         <FaBars onClick={changeNav} className="md:hidden text-2xl ml-12 text-dark-100 cursor-pointer" />
         <div onClick={changeNav} ref={navMenu} className="absolute hidden top-0 text-light bg-light w-full  z-50 h-screen md:hidden">
           <div className="w-full h-[80%] flex flex-col items-center justify-around">
-            <span className="cursor-pointer text-light-100 transition-all duration-300 hover:text-dark-200 hover:text-xl">
+            <span className="cursor-pointer text-dark-100 transition-all duration-300 hover:text-dark-200 hover:text-xl">
               <LinkS onClick={changeNav} to="/about">About</LinkS>
          </span>
-            <span className="cursor-pointer text-light-100 transition-all duration-300 hover:text-dark-200 hover:text-xl">
+            <span className="cursor-pointer text-dark-100 transition-all duration-300 hover:text-dark-200 hover:text-xl">
               <LinkS onClick={changeNav} to="/drives">Drives</LinkS>
             </span>
             <span className="cursor-pointer active:text-sm text-dark-100 transition-all duration-300 hover:text-dark-200 hover:text-xl">
