@@ -2,8 +2,9 @@ import React from "react";
 import { ChooseDepartment } from "../../components";
 import { getDepartments, getYears } from "../../Services";
 import Head from "next/head";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { Loader } from "../../components";
+import { Link as LinkS } from "react-scroll";
 const years = ({ currentYearData }) => {
   const router = useRouter();
 
@@ -17,14 +18,26 @@ const years = ({ currentYearData }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen w-full grid place-items-center">
-
-        {currentYearData.departements.map((studyYear,index) => {
+        <div className="min-h-screen w-full grid place-items-center bg-opacity-80 bg-gradient-to-b from-dark-200 to-dark-100 ">
+          <div className="w-[80%] rounded-lg gap-4 text-2xl text-light h-[80%] grid auto-rows-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          {currentYearData.departements.map((getName) => {
+                return (
+                  <LinkS to={`/${getName.name}`}>
+                    <div className="w-[80%] h-[80%] transition-all duration-500 hover:bg-gradient-to-tl hover:scale-105 active:scale-95 shadow-lg active:bg-light hover:text-dark-200 text-center grid place-items-center cursor-pointer bg-gradient-to-bl from-sky-400 to-light-200">{getName.name}</div>
+                  </LinkS>
+                )
+              })}
+          </div>
+        </div>
+        {currentYearData.departements.map((studyYear, index) => {
           return (
-            <ChooseDepartment
-              key={index}
-              currentYear={studyYear.currentYear}
-              department={studyYear}
-            />
+            <div name={`/${studyYear.name}`} className="min-h-screen w-full">
+              <ChooseDepartment
+                key={index}
+                currentYear={studyYear.currentYear}
+                department={studyYear}
+              />
+            </div>
           );
         })}
       </div>
@@ -33,7 +46,6 @@ const years = ({ currentYearData }) => {
 };
 
 export default years;
-
 
 export async function getStaticProps({ params }) {
   const currentYearData = (await getDepartments(params.slug)) || [];
@@ -45,7 +57,6 @@ export async function getStaticPaths() {
   const yrs = await getYears();
   return {
     paths: yrs.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback:true,    
-
+    fallback: true,
   };
 }
