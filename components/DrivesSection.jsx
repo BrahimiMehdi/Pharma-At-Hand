@@ -45,18 +45,7 @@ const DrivesSection = () => {
               <div className="w-[200px] shadow-xl  transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-blue-400 to-light-100">
                 <Link  href="/year/2nd-year">2nd Year</Link>
               </div>
-              <div className="w-[200px] shadow-xl  transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-slate-400 to-light-100">
-                <Link  href="/year/3rd-year">3rd Year</Link>
-              </div>
-              <div className="w-[200px] shadow-xl  transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-amber-400 to-light-100">
-                <Link  href="/year/4th-year">4th Year</Link>
-              </div>
-              <div className="w-[200px] shadow-xl  transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-indigo-300 to-light-100">
-                <Link  href="/year/5th-year">5th Year</Link>
-              </div>
-              <div className="w-[200px] shadow-xl  transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-cyan-500 to-light-100">
-                <Link  href="/year/intern">Intern</Link>
-              </div>
+              
               
             </div>
         </div>
