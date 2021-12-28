@@ -38,8 +38,8 @@ const AboutSection = () => {
       <div className="w-[80%] mt-8 min-h-[50px] hidden sm:grid sm:place-items-center">
         <h1 ref={mainTitle} className="text-5xl text-dark-100">What is Pharma At Hand ?</h1>
       </div>
-      <div className="w-[80%] min-h-[60%] grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 place-items-center">
-        <img ref={aboutImage} src="/Pharma.svg" alt="" />
+      <div className="w-[80%] min-h-[40%] sm:min-h-[60%] grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 place-items-center">
+        <img className="h-full w-full row-span-2 object-contain" ref={aboutImage} src="/Pharma.svg" alt="" />
         <div ref={subtitle} className="flex flex-col items-center justify-evenly h-full text-dark-200">
           <h1 className="text-2xl">A platform made by pharmacy students for pharmacy students</h1>
           <p className="mt-4 sm:mt-0">

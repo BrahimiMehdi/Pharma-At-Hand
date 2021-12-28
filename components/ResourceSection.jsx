@@ -63,7 +63,7 @@ const ResourceSection = () => {
           ref={rsrcImage}
           className="w-full hidden h-full sm:grid sm:place-items-center"
         >
-          <img src="/resources.svg" alt="" />
+          <img className="object-contain" src="/resources.svg" alt="" />
         </div>
       </div>
     </div>
