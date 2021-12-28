@@ -19,11 +19,11 @@ const years = ({ currentYearData }) => {
       </Head>
       <div className="min-h-screen w-full grid place-items-center">
         <div className="min-h-screen w-full grid place-items-center bg-opacity-80 bg-gradient-to-b from-dark-200 to-dark-100 ">
-          <div className="w-[80%] rounded-lg gap-4 text-2xl text-light h-[80%] grid auto-rows-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          <div className="w-[80%] rounded-lg gap-4 text-2xl py-8  text-light min-h-[80%] grid auto-rows-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {currentYearData.departements.map((getName) => {
                 return (
                   <LinkS to={`/${getName.name}`}>
-                    <div className="w-[80%] h-[80%] transition-all duration-500 hover:bg-gradient-to-tl hover:scale-105 active:scale-95 shadow-lg active:bg-light hover:text-dark-200 text-center grid place-items-center cursor-pointer bg-gradient-to-bl from-sky-400 to-light-200">{getName.name}</div>
+                    <div className="w-[300px] hover:from-green-300 h-[300px] rounded-full transition-all duration-500 hover:bg-gradient-to-tl hover:scale-105 active:scale-95 shadow-lg active:bg-light hover:text-dark-200 text-center grid place-items-center cursor-pointer bg-gradient-to-bl from-sky-400 to-light-200">{getName.name}</div>
                   </LinkS>
                 )
               })}
