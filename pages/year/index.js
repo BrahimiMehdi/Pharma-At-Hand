@@ -15,7 +15,7 @@ const year = ({ yearData }) => {
           return (
             <div
               key={index}
-              className="h-full px-4 py-8 bg-light-100 rounded-xl shadow-xl w-full flex flex-col justify-evenly items-center"
+              className="h-full px-4 shadow-light-100 py-8 bg-gradient-to-t from-light-100 to-light rounded-xl shadow-md w-full flex flex-col justify-evenly items-center"
             >
               
               <div className="h-full w-4/5">
