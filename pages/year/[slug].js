@@ -2,7 +2,13 @@ import React from "react";
 import { ChooseDepartment } from "../../components";
 import { getDepartments, getYears } from "../../Services";
 import Head from "next/head";
+import { useRouter } from 'next/router';
 const years = ({ yearData }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
   return (
     <main className="w-full  min-h-screen snap-none  md:snap-y md:snap-proximity  bg-light-100">
       <Head>
@@ -38,6 +44,6 @@ export async function getStaticPaths() {
   const yrs = await getYears();
   return {
     paths: yrs.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: true,
   };
 }
