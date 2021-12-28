@@ -15,7 +15,7 @@ const year = ({ yearData }) => {
           <Link
             href="/"
           >
-            <span className="text-light-100 transition-all duration-300 hover:scale-105 hover:text-light active:scale-95 active:text-green-300 text-5xl sm:text-3xl font-bold cursor-pointer">
+            <span className="text-light-100 transition-all duration-300 hover:scale-105 hover:text-light active:scale-95 active:text-green-300 text-2xl sm:text-4xl font-bold cursor-pointer">
                 pharma at hand
             </span>
           </Link>
