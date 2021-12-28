@@ -1,17 +1,24 @@
-import React from "react";
+import React,{useEffect,useRef} from "react";
 import { getYears } from "../../Services";
 import { ChooseDepartment } from "../../components";
 import Head from "next/head";
 import Link from "next/link";
-
+import { gsap ,Power3} from "gsap";
 const year = ({ yearData }) => {
+  const pharmaTitle=useRef();
+  const yearsGrid = useRef()
+  const tl = gsap.timeline()
+  useEffect(() => {
+    tl.from(pharmaTitle.current,{y:"-100%",opacity:0,ease:Power3.easeOut,duration:0.8},0.1)
+      .from(yearsGrid.current,{y:"100%",opacity:0,ease:Power3.easeInOut,duration:1.8,scale:0},0.5)
+  }, [])
   return (
     <main className="w-full grid place-items-center min-h-screen snap-none  md:snap-y md:snap-proximity  bg-dark-200">
       <Head>
         <title>Pharma At Hand</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full grid place-items-center mt-4 mb-2 h-full ">
+      <div ref={pharmaTitle} className="w-full grid place-items-center mt-4 mb-2 h-full ">
           <Link
             href="/"
           >
@@ -20,7 +27,7 @@ const year = ({ yearData }) => {
             </span>
           </Link>
         </div>
-      <div className="w-full gap-8 py-4 px-6  min-h-screen grid grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2  place-items-center">
+      <div ref={yearsGrid} className="w-full gap-8 py-4 px-6  min-h-screen grid grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2  place-items-center">
         {yearData.map((studyYear, index) => {
           return (
             <div
