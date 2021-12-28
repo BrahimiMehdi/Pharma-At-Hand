@@ -40,10 +40,10 @@ const DrivesSection = () => {
             
             <div ref={gridEl} className="grid place-items-center gap-8 grid-cols-1 w-full h-full mb-12 grid-rows-6 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2">
               <div className="w-[200px] shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-green-200 to-light-100">
-                <Link  href="/year/1st-year">1st Year</Link>
+                <Link prefetch={false}  href="/year/1st-year">1st Year</Link>
               </div>
               <div className="w-[200px] shadow-xl  transition-all duration-300 hover:scale-105 hover:bg-gradient-to-bl hover:from-light hover:to-light-200 text-2xl text-dark-200 h-[200px] rounded-full grid place-items-center bg-gradient-to-br from-blue-400 to-light-100">
-                <Link  href="/year/2nd-year">2nd Year</Link>
+                <Link prefetch={false}  href="/year/2nd-year">2nd Year</Link>
               </div>
               
               
