@@ -5,9 +5,9 @@ const ChooseDepartment = ({ department,currentYear }) => {
     
 
   return (
-    <div className="w-full min-h-full flex flex-col items-center justify-evenly bg-dark-200">
+    <div className="w-full min-h-screen flex flex-col items-center justify-evenly bg-dark-200">
         
-      <div className="grid place-items-center">
+      <div className="grid place-items-center h-full">
         <h1 className="text-4xl text-light-200">{department.name}</h1>
       </div>
       <div className="grid grid-cols-1 gap-8 grid-rows-9 sm:grid-cols-2 sm:grid-rows-6 md:grid-rows-3 md:grid-cols-3 place-items-center w-[80%] h-[80%]">
