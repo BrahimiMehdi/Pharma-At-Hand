@@ -2,10 +2,14 @@ import React from "react";
 import { ChooseDepartment } from "../../components";
 import { getDepartments, getYears } from "../../Services";
 import Head from "next/head";
-
+import { useRouter } from 'next/router';
+import { Loader } from "../../components";
 const years = ({ currentYearData }) => {
   const router = useRouter();
 
+  if (router.isFallback) {
+    return <Loader />;
+  }
   return (
     <main className="w-full  min-h-screen snap-none  md:snap-y md:snap-proximity  bg-light-100">
       <Head>
