@@ -14,7 +14,7 @@ const year = ({ yearData }) => {
         {yearData.map((studyYear,index) => {
           return (
             <div key={index} className="grid h-full bg-gradient-to-r from-light-200 to-orange-300 text-4xl text-light transition-all duration-300 hover:scale-105  w-full place-items-center">
-              <Link key={studyYear.node.currentYear} href={`/year/${studyYear.node.currentYear}`} className="text-4xl text-light">
+              <Link href={`/year/${studyYear.node.currentYear}`} className="text-4xl text-light">
                 {studyYear.node.currentYear}
               </Link>
             </div>
