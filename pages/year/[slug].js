@@ -38,6 +38,6 @@ export async function getStaticPaths() {
   const yrs = await getYears();
   return {
     paths: yrs.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: true,
+    fallback: false,
   };
 }
