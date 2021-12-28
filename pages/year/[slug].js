@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { Loader } from "../../components";
 import { Link as LinkS } from "react-scroll";
+import { SecondaryHeader } from "../../components";
 const years = ({ currentYearData }) => {
   const router = useRouter();
 
@@ -17,13 +18,14 @@ const years = ({ currentYearData }) => {
         <title>Pharma At Hand</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="min-h-screen w-full grid place-items-center">
-        <div className="min-h-screen w-full grid place-items-center bg-opacity-80 bg-gradient-to-b from-dark-200 to-dark-100 ">
-          <div className="w-[80%] rounded-lg gap-4 text-2xl py-8  text-light min-h-[80%] grid auto-rows-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <SecondaryHeader />
+      <div name="/" className="min-h-screen w-full grid place-items-center">
+        <div className="min-h-screen py-16 w-full grid place-items-center bg-opacity-80 bg-gradient-to-b from-dark-200 to-dark-100 ">
+          <div id="depSection" className="w-[80%] rounded-lg gap-4 place-items-center text-2xl py-8  text-light min-h-[80%] grid auto-rows-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {currentYearData.departements.map((getName) => {
                 return (
                   <LinkS to={`/${getName.name}`}>
-                    <div className="w-[300px] hover:from-green-300 h-[300px] rounded-full transition-all duration-500 hover:bg-gradient-to-tl hover:scale-105 active:scale-95 shadow-lg active:bg-light hover:text-dark-200 text-center grid place-items-center cursor-pointer bg-gradient-to-bl from-sky-400 to-light-200">{getName.name}</div>
+                    <div className="w-[250px] hover:from-green-300 h-[250px] rounded-full transition-all duration-500 hover:bg-gradient-to-tl hover:scale-105 active:scale-95 shadow-lg active:bg-light hover:text-dark-200 text-center grid place-items-center cursor-pointer bg-gradient-to-bl from-sky-400 to-light-200">{getName.name}</div>
                   </LinkS>
                 )
               })}
