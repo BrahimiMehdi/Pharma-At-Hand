@@ -1,12 +1,12 @@
 
-import React from "react"
+import React from "react";
 
 const ChooseDepartment = ({ department,currentYear }) => {
     
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-evenly bg-dark-200">
-
+  
       <div className="grid place-items-center h-full">
         <h1 className="text-4xl text-center text-light-200">{department.name}</h1>
       </div>
