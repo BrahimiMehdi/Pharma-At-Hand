@@ -36,7 +36,7 @@ const years = ({ currentYearData }) => {
       </Head>
       <SecondaryHeader />
       <div name="/" className="min-h-screen w-full grid place-items-center">
-        <div className="min-h-screen py-16 w-full grid place-items-center bg-opacity-80 bg-gradient-to-b from-dark-200 to-dark-100 ">
+        <div className="min-h-screen py-16 w-full grid place-items-center bg-opacity-80 bg-gradient-to-b from-dark-100 to-dark-200 ">
           <div
             ref={yearsGrid}
             id="depSection"
