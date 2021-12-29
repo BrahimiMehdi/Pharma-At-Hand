@@ -8,18 +8,25 @@ import { useState } from "react";
 const secondaryHeader = () => {
   const [openNav, setopenNav] = useState(false);
   const changeNav = () => {
-    setopenNav(!openNav)
+    setopenNav(!openNav);
     if (openNav) {
-        gsap.to(navMenu.current,{y:"0%",ease:Power3.easeOut,display:"block"})
-    }
-    else{
-        gsap.to(navMenu.current,{y:"100%",ease:Power3.easeOut,display:"hidden"})
+      gsap.to(navMenu.current, {
+        y: "0%",
+        ease: Power3.easeOut,
+        display: "block",
+      });
+    } else {
+      gsap.to(navMenu.current, {
+        y: "100%",
+        ease: Power3.easeOut,
+        display: "hidden",
+      });
     }
   };
   gsap.registerPlugin(ScrollTrigger);
   const headerBg = useRef();
   const bigHeaderBg = useRef();
-  const navMenu = useRef()
+  const navMenu = useRef();
   useEffect(() => {
     gsap.to(headerBg.current, {
       backgroundColor: "transparent",
@@ -45,14 +52,12 @@ const secondaryHeader = () => {
       },
       0.3
     );
-    
   }, []);
   return (
     <header
       ref={bigHeaderBg}
       className="flex z-20 justify-center sm:justify-between w-screen px-0 md:px-6 h-[80px] items-center fixed"
     >
-        
       <div>
         <LinkS
           className="text-light-200 text-xl sm:text-3xl font-bold cursor-pointer"
@@ -61,14 +66,25 @@ const secondaryHeader = () => {
           Pharma At Hand
         </LinkS>
       </div>
-      <FaBars onClick={changeNav} className="sm:hidden text-2xl ml-12 text-light cursor-pointer" />
-      <div onClick={changeNav} ref={navMenu} className="absolute hidden top-0 text-light bg-light-100 w-full  z-50 h-screen md:hidden">
+      <FaBars
+        onClick={changeNav}
+        className="sm:hidden text-2xl ml-12 text-light cursor-pointer"
+      />
+      <div
+        onClick={changeNav}
+        ref={navMenu}
+        className="absolute hidden top-0 text-light bg-light-100 w-full  z-50 h-screen md:hidden"
+      >
         <div className="w-full h-[80%] flex flex-col items-center justify-around">
           <span className="cursor-pointer text-dark-100 transition-all duration-300 hover:text-dark-200 hover:text-xl">
-            <Link onClick={changeNav} href="/">Home</Link>
+            <Link onClick={changeNav} href="/">
+              Home
+            </Link>
           </span>
           <span className="cursor-pointer text-dark-100 transition-all duration-300 hover:text-dark-200 hover:text-xl">
-            <Link onClick={changeNav} href="/year">Choose Year</Link>
+            <Link onClick={changeNav} href="/year">
+              Choose Year
+            </Link>
           </span>
         </div>
       </div>
