@@ -49,20 +49,22 @@ const year = ({ yearData }) => {
           return (
             <div
               key={index}
-              className="h-full px-4 shadow-light-100 py-8 bg-gradient-to-t from-light-100 to-light rounded-xl shadow-md w-full flex flex-col justify-evenly items-center"
+              className="h-full px-4 shadow-dark-100 py-8 bg-gradient-to-t border from-light-100 to-light rounded-xl shadow-md w-full "
             >
-              <div className="h-full w-4/5">
-                <img
-                  className="object-contain"
-                  src={`/bg (${index + 1}).svg`}
-                  alt=""
-                />
+              <div className="justify-evenly items-center border-2 border-dark-200 py-2 rounded-lg  flex flex-col ">
+                <div className="h-full w-4/5">
+                  <img
+                    className="object-contain"
+                    src={`/bg (${index + 1}).svg`}
+                    alt=""
+                  />
+                </div>
+                <Link href={`/year/${studyYear.node.slug}`}>
+                  <span className="w-[200px] h-[50px] text-center grid place-items-center border border-light transition-all duration-300 hover:bg-gradient-to-l hover:scale-105 active:bg-dark-200 active:scale-95 text-white cursor-pointer text-2x bg-gradient-to-r from-dark-100 to-dark-200">
+                    {studyYear.node.currentYear}
+                  </span>
+                </Link>
               </div>
-              <Link href={`/year/${studyYear.node.slug}`}>
-                <span className="w-[200px] h-[50px] text-center grid place-items-center border border-light transition-all duration-300 hover:bg-gradient-to-l hover:scale-105 active:bg-dark-200 active:scale-95 text-white cursor-pointer text-2x bg-gradient-to-r from-dark-100 to-dark-200">
-                  {studyYear.node.currentYear}
-                </span>
-              </Link>
             </div>
           );
         })}
