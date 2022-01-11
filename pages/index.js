@@ -1,26 +1,29 @@
-import Head from 'next/head'
-import { Header } from '../components'
-import { HeroSection } from '../components'
-import { AboutSection } from '../components'
-import { DrivesSection } from '../components'
-import {WelcomeAnimation} from '../components'
-import { ResourceSection } from '../components'
-import { getYears } from '../Services'
-export default function Home({yearData}) {
+import Head from "next/head";
+import { useState } from "react";
+import { WelcomeAnimation } from "../components";
+import { HomePage } from "../components";
+import { getYears } from "../Services";
+import { SideBar } from "../components";
+export default function Home({ yearData }) {
+  const [openNav, setopenNav] = useState(false)
+  const changeNav = ()=>{
+    setopenNav(!openNav)
+    console.log(openNav)
+  }
   return (
-    <main className="w-full  min-h-screen snap-none  md:snap-y md:snap-proximity  bg-light-100">
+    <main className="min-w-full min-h-screen">
       <Head>
         <title>Pharma At Hand</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+
       <WelcomeAnimation />
-      <HeroSection />
-      <AboutSection />
-      <DrivesSection year={yearData} />
-      <ResourceSection />
+      <div className="min-w-full min-h-screen grid grid-cols-12 grid-rows-1">
+        <SideBar setopenNav={changeNav} openNav={openNav} />
+        <HomePage setopenNav={changeNav} openNav={openNav} yearsDat={yearData} />
+      </div>
     </main>
-  )
+  );
 }
 export async function getStaticProps() {
   const yearData = (await getYears()) || [];

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { getYears } from "../../Services";
-import { ChooseDepartment } from "../../components";
+
 import Head from "next/head";
 import Link from "next/link";
 import { gsap, Power3 } from "gsap";

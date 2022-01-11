@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import { ChooseDepartment } from "../../components";
+
 import { getDepartments, getYears } from "../../Services";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Loader } from "../../components";
 import { Link as LinkS } from "react-scroll";
-import { SecondaryHeader } from "../../components";
+import { ChooseDepartment } from "../../components";
 import { gsap, Power3 } from "gsap";
 const years = ({ currentYearData }) => {
   const router = useRouter();
@@ -34,7 +34,7 @@ const years = ({ currentYearData }) => {
         <title>Pharma At Hand</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SecondaryHeader />
+
       <div name="/" className="min-h-screen w-full grid place-items-center">
         <div className="min-h-screen py-16 w-full grid place-items-center bg-opacity-80 bg-gradient-to-b from-dark-100 to-dark-200 ">
           <div
@@ -45,7 +45,7 @@ const years = ({ currentYearData }) => {
             {currentYearData.departements.map((getName, index) => {
               return (
                 <LinkS key={index} to={`/${getName.name}`}>
-                  <div className="w-[185px] from-green-300 h-[185px] md:w-[205px] md:h-[205px] rounded-full transition-all duration-500 hover:bg-gradient-to-tl hover:scale-105 active:scale-95 shadow-lg active:bg-light hover:text-dark-200 text-center grid place-items-center cursor-pointer bg-gradient-to-bl hover:from-amber-400 to-light-200">
+                  <div className="w-[185px]  h-[185px] md:w-[205px] md:h-[205px] rounded-full transition-all duration-500  hover:scale-105 active:scale-95 shadow-lg active:bg-light hover:text-white text-center grid place-items-center cursor-pointer bg-gradient-to-bl  ">
                     {getName.name}
                   </div>
                 </LinkS>
