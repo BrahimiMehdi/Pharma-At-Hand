@@ -22,11 +22,11 @@ const WelcomeAnimation = () => {
   }, []);
   return (
     <>
-      <div ref={welcome} className="h-screen px-4 z-10 w-screen grid place-items-center fixed bg-dark-purple">
-            <h1 ref={welcomeTxt} className="text-center font-semibold text-5xl text-high-green">Welcome To Our WebSite</h1>
+      <div ref={welcome} className="h-screen px-4 z-10 w-screen hidden sm:grid sm:place-items-center fixed bg-dark-purple">
+            <h1 ref={welcomeTxt} className="text-center hidden sm:inline font-semibold text-5xl text-high-green">Welcome To Our WebSite</h1>
             
         </div>
-      <div ref={secondeBox} className="h-screen w-screen fixed bg-light-yellow"></div>
+      <div ref={secondeBox} className="h-screen w-screen hidden sm:block fixed bg-light-yellow"></div>
     </>
   );
 };
