@@ -5,7 +5,7 @@ const DepartementsPage = ({ drivesData, openNav, setopenNav }) => {
   return (
     <div
       className={`px-2  grid place-items-center min-h-screen transition-all duration-300 ${
-        openNav ? "col-span-8" : "col-span-10"
+        openNav ? "col-span-8" : "col-span-12"
       }`}
     >
       <div className="min-w-[80%] flex flex-col min-h-[70%] py-0 font-semibold  text-dark-purple ">

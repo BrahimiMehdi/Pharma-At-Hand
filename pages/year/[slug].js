@@ -26,7 +26,7 @@ const years = ({ currentYearData }) => {
       </Head>
 
 
-      <div className="min-w-full min-h-screen grid grid-cols-12 gap-0 sm:gap-6 md:gap-20 grid-rows-1">
+      <div className="min-w-full overflow-x-hidden min-h-screen grid grid-cols-12 gap-0 sm:gap-0 md:gap-20 grid-rows-1">
         <SideBar setopenNav={changeNav} openNav={openNav} />
         <YearPage setopenNav={changeNav} openNav={openNav} yearsDat={currentYearData} />
       </div>

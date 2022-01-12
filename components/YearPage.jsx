@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
 const YearPage = ({yearsDat,setopenNav,openNav}) => {
     return (
-        <div className={`px-2 sm:px-4 overflow-x-hidden grid place-items-center min-h-screen transition-all duration-300 ${openNav ? "col-span-8" :"col-span-10"}`}>
+        <div className={`px-2 sm:px-4 overflow-x-hidden grid place-items-center min-w-full min-h-screen transition-all duration-300 ${openNav ? "col-span-8" :"col-span-12 "}`}>
       <div className="min-w-[80%] flex flex-col min-h-[70%] py-0 font-semibold  text-dark-purple ">
         <div className={`py-4 px-2 z-10 sticky top-0 mb-12 ${openNav ? "hidden" :"flex items-center"}`}>
         <FaBars onClick={setopenNav} className={`text-dark-purple transition-all duration-300 hover:scale-105 hover:text-yellow cursor-pointer sm:text-3xl md:text-4xl text-2xl ${openNav ? "hidden" :"inline-block"}`} />
         </div>
         <h1 className="text-2xl sm:text-4xl md:text-5xl mt-12 mb-8">Choose your Department</h1>
-        <div className="grid grid-cols-1  min-h-[80%] sm:grid-cols-2 md:grid-cols-3 gap-8 grid-rows-auto ">
+        <div className="grid grid-cols-1 min-h-[80%] sm:grid-cols-2 lg:grid-cols-3 gap-8 grid-rows-auto ">
           {yearsDat.departements.map((dep, index) => {
             return (
               <Link key={index+1} href={`/Departement/${dep.slug}`}>

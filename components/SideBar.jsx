@@ -5,8 +5,8 @@ import { ImHome3 } from "react-icons/im";
 const SideBar = ({ openNav, setopenNav }) => {
   return (
     <aside
-      className={`pt-[5%] min-w-full col-span-4  min-h-screen overflow-x-hidden bg-dark-purple transition-all duration-300 ${
-        openNav ? "-translate-x-0 col-span-4" : "-translate-x-[100%] col-span-1"
+      className={`pt-[5%] min-w-full col-span-4 z-30  min-h-screen overflow-x-hidden bg-dark-purple transition-all duration-300 ${
+        openNav ? "-translate-x-0 col-span-4 block" : "-translate-x-[100%] hidden"
       }`}
     >
       <div className=" h-[20%] min-w-full flex justify-center">

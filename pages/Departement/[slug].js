@@ -26,7 +26,7 @@ const Drives = ({ drivesData }) => {
       </Head>
 
    
-      <div className="min-w-full min-h-screen grid grid-cols-12 gap-0 sm:gap-6 md:gap-20 grid-rows-1">
+      <div className="min-w-full min-h-screen overflow-x-hidden grid grid-cols-12 gap-0 sm:gap-6 md:gap-20 grid-rows-1">
         <SideBar setopenNav={changeNav} openNav={openNav} />
         <DepartementsPage setopenNav={changeNav} openNav={openNav} drivesData={drivesData} />
       </div>
