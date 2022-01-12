@@ -4,7 +4,7 @@ import { getDepartments, getYears } from "../../Services";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Loader } from "../../components";
-import YearPage from "../../components/YearPage";
+import {YearPage} from "../../components";
 
 const years = ({ currentYearData }) => {
   const router = useRouter();

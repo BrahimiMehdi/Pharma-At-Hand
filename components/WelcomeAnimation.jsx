@@ -22,7 +22,7 @@ const WelcomeAnimation = () => {
   }, []);
   return (
     <>
-      <div ref={welcome} className="h-screen z-10 w-screen grid place-items-center fixed bg-dark-purple">
+      <div ref={welcome} className="h-screen px-4 z-10 w-screen grid place-items-center fixed bg-dark-purple">
             <h1 ref={welcomeTxt} className="text-center font-semibold text-5xl text-high-green">Welcome To Our WebSite</h1>
             
         </div>

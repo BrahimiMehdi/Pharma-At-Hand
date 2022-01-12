@@ -8,8 +8,8 @@ const SideBar = ({openNav,setopenNav}) => {
       
       <div className=" h-[20%] min-w-full flex justify-center">
       <div className="flex items-center justify-around h-[100px] mr-4">
-        <Link href="/"><ImHome3 className="text-white ml-4 inline sm:hidden text-4xl transition-all duration-300 hover:text-5xl cursor-pointer hover:text-yellow" /></Link>
-      <HiOutlineArrowCircleLeft onClick={setopenNav} className="text-white ml-4 text-4xl transition-all duration-300 hover:text-5xl cursor-pointer hover:text-yellow" />
+        <Link href="/"><ImHome3 className="text-white ml-4 inline sm:hidden text-2xl sm:text-3xl md:text-4xl transition-all duration-300 cursor-pointer hover:text-yellow" /></Link>
+      <HiOutlineArrowCircleLeft onClick={setopenNav} className="text-white ml-4 text-2xl sm:text-3xl md:text-4xl transition-all duration-300 sm:hover:text-4xl md:hover:text-5xl cursor-pointer hover:text-yellow" />
       </div>
         <Link className="" href="/">
           <div className={`w-[80%] mr-4 flex-1 sm:w-[180px] h-[100px] rounded-xl border-b-4 border-high-green hidden sm:grid sm:place-items-center ${(openNav ? "-translate-x-0 " : "-translate-x-[100%]")} `}>
