@@ -16,12 +16,12 @@ const DepartementsPage = ({ drivesData, openNav, setopenNav }) => {
           Find your drive
         </h1>
         <div className="grid grid-cols-1  min-h-[80%] sm:grid-cols-2 md:grid-cols-3 gap-8 grid-rows-auto ">
-          {drivesData.map((drv, index) => {
+          {drivesData.map((drv) => {
             return (
-              drv.drives.map((drvDetail)=>{
+              drv.drives.map((drvDetail,index)=>{
                 return(
                     <a
-                
+                key={index}
                 rel="noopener noreferrer"
                 href={drvDetail.driveLink}
                 target="_blank"
