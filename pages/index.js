@@ -8,7 +8,7 @@ export default function Home({ yearData }) {
   const [openNav, setopenNav] = useState(false)
   const changeNav = ()=>{
     setopenNav(!openNav)
-    console.log(openNav)
+
   }
   return (
     <main className="min-w-full min-h-screen">
@@ -18,7 +18,7 @@ export default function Home({ yearData }) {
       </Head>
 
       <WelcomeAnimation />
-      <div className="min-w-full min-h-screen grid grid-cols-12 grid-rows-1">
+      <div className="min-w-full min-h-screen grid grid-cols-12 gap-0 sm:gap-6 md:gap-20 grid-rows-1">
         <SideBar setopenNav={changeNav} openNav={openNav} />
         <HomePage setopenNav={changeNav} openNav={openNav} yearsDat={yearData} />
       </div>

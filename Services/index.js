@@ -24,10 +24,7 @@ export const getDepartments = async (slug) => {
     currentYear
     departements {
       name
-      drives {
-        title
-        driveLink
-      }
+      slug
     
     }
     slug
@@ -40,4 +37,35 @@ export const getDepartments = async (slug) => {
   `;
   const result = await request(graphqlAPI, query, { slug });
   return result.year;
+};
+export const getDrives = async (slug) => {
+  const query = gql`
+  query MyQuery($slug:String!) {
+  departements(where: {slug: $slug}) {
+    drives{
+      driveLink
+      title
+    }
+    name
+  }
+}
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+  return result.departements;
+};
+export const getDepDetails = async () => {
+  const query = gql`
+  query MyQuery {
+  departementsConnection {
+    edges {
+      node {
+        name
+        slug
+      }
+    }
+  }
+}
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.departementsConnection;
 };
