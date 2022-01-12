@@ -5,14 +5,16 @@ import { ImHome3 } from "react-icons/im";
 const SideBar = ({ openNav, setopenNav }) => {
   return (
     <aside
-      className={`pt-[5%] min-w-full col-span-4 min-h-screen overflow-x-hidden bg-dark-purple transition-all duration-300 ${
+      className={`pt-[5%] min-w-full col-span-4  min-h-screen overflow-x-hidden bg-dark-purple transition-all duration-300 ${
         openNav ? "-translate-x-0 col-span-4" : "-translate-x-[100%] col-span-1"
       }`}
     >
       <div className=" h-[20%] min-w-full flex justify-center">
         <div className="flex items-center justify-around h-[100px] mr-4">
           <Link href="/">
+            <div>
             <ImHome3 className="text-white ml-4 inline sm:hidden text-2xl sm:text-3xl md:text-4xl transition-all duration-300 cursor-pointer hover:text-yellow" />
+            </div>
           </Link>
           <HiOutlineArrowCircleLeft
             onClick={setopenNav}
